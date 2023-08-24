@@ -1,0 +1,54 @@
+.circular-image {
+  width: 150px; /* Adjust the size as needed */
+  height: 150px;
+  background-color: #999;
+  border-radius: 50%; /* Makes the image circular */
+  overflow: hidden; /* Ensures the image doesn't overflow the circle */
+}
+
+.circular-image img {
+  width: 100%; /* Makes the image fill the circular container */
+  height: 100%;
+  object-fit: cover; /* Ensures the image covers the entire circle */
+}
+/* The message box is shown when the user clicks on the password field */
+#message {
+  display:none;
+  background: #f1f1f1;
+  color: #000;
+  position: relative;
+  padding: 20px;
+  margin-top: 10px;
+}
+
+#message p {
+  padding: 10px 35px;
+  font-size: 18px;
+}
+
+/* Add a green text color and a checkmark when the requirements are right */
+.valid {
+  color: green;
+}
+
+.valid:before {
+  position: relative;
+  left: -35px;
+   content: "\2713"; /* Unicode code point for checkmark */
+  font-family: Arial, sans-serif;
+  font: bold; 
+}
+
+/* Add a red text color and an "x" icon when the requirements are wrong */
+.invalid {
+  color: red;
+}
+
+.invalid:before {
+  position: relative;
+  left: -35px;
+content: "\274C"; /* Unicode code point for error symbol */
+  font-family: Arial, sans-serif; /* Choose a font that supports the character */
+  color: red; /* Optional: Set the color for the error symbol */
+]
+}
