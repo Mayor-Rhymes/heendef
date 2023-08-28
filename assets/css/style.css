@@ -761,6 +761,16 @@ form .alert {
   color: black;
 }
 
+.event-container {
+
+  display: grid; 
+  grid-template-columns: repeat(3, 1fr); 
+  gap: 20px;
+  
+}
+
+
+
 /* =============================================================================
 	Responsive
 ========================================================================== */
@@ -804,6 +814,9 @@ form .alert {
 
   .footer-col {
     margin-bottom: 50px;
+  }
+  .event-container {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 /* Small devices (tablets, 768px and Down) */
@@ -866,7 +879,14 @@ form .alert {
   .col-form {
     margin-bottom: 25px;
   }
+  .event-container {
+    grid-template-columns: repeat(1, 1fr);
+  }
 }
+
+
+
+
 /* Extra Small devices (tablets, 480px and Down) */
 @media (max-width: 480px) {
   .carousel-home .carousel-title {
@@ -879,6 +899,10 @@ form .alert {
   }
   .carousel-home .carousel-indicators {
     bottom: 0;
+  }
+
+  .event-container {
+    grid-template-columns: repeat(1, 1fr);
   }
 }
 /* =============================================================================
@@ -1070,4 +1094,14 @@ form .alert {
 .zoomIn {
   -webkit-animation-name: zoomIn;
   animation-name: zoomIn;
+}
+
+
+
+
+
+@media screen and (max-width: 500px) {
+
+
+
 }

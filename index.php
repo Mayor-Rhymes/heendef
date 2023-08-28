@@ -119,7 +119,9 @@
                     </li>
                     <li><a href="gallery.html">GALLERY</a></li>
                     <li><a href="admin/index.php">SEE YOUR DOCTOR</a></li>
-                    <li><a href="contact.html">CONTACT</a></li>
+                    <li><a href="contact.php">CONTACT</a></li>
+                    <li><a href="events.php">EVENTS</a></li>
+
                     
 
                   </ul>
