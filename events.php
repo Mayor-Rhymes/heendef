@@ -155,20 +155,16 @@
                 style="display: flex; flex-direction: column; gap: 20px; box-shadow: 3px 10px 40px lightgrey; padding-block: 40px; padding-inline: 40px;">
 
 
-                <div
-                    style="display: flex; border-radius: 100%; width: 50px; height: 50px; background-color: azure; align-items: center; justify-content: center;">
 
-                    <p>4 Oct</p>
-
-                </div>
                 <div>
                     <p style="font-size: 24px;">This is the first event</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
                         labore
                     </p>
                     <div style="display: flex; justify-content: space-evenly">
-                        <button class="col-6 btn btn-primary btn-md">Volunteer</button>
-                        <button class="col-6 btn btn-primary btn-md">Donate</button>
+                        <a href="#" class="btn btn-primary" data-toggle="modal"
+                            data-target="#volunteerModal">VOLUNTEER</a>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal">Donate</a>
                     </div>
 
 
@@ -176,6 +172,20 @@
                     <hr />
 
                     <p>Location: Lorem ipsum</p>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 10px; color: #4831D4; font-size: 16px;">
+
+                    <div style="display: flex; justify-content: space-between;">
+                        <i class="fa fa-calendar"></i>
+                        <span>2023-10-10</span>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between;">
+                        <i class="fa fa-clock-o"></i>
+                        <span>10:30 - 11:30</span>
+                    </div>
+
                 </div>
 
             </div>
@@ -183,12 +193,7 @@
                 style="display: flex; flex-direction: column; gap: 20px; box-shadow: 3px 10px 40px lightgrey; padding-block: 40px; padding-inline: 40px;">
 
 
-                <div
-                    style="display: flex; border-radius: 100%; width: 50px; height: 50px; background-color: azure; align-items: center; justify-content: center;">
 
-                    <p>4 Oct</p>
-
-                </div>
                 <div>
                     <p style="font-size: 24px;">This is the first event</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -196,14 +201,29 @@
                     </p>
 
                     <div style="display: flex; justify-content: space-evenly">
-                        <button class="col-6 btn btn-primary btn-md">Volunteer</button>
-                        <button class="col-6 btn btn-primary btn-md">Donate</button>
+                        <a href="#" class="btn btn-primary" data-toggle="modal"
+                            data-target="#volunteerModal">VOLUNTEER</a>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal">Donate</a>
                     </div>
 
 
                     <hr />
 
                     <p>Location: Lorem ipsum</p>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 10px; color: #4831D4; font-size: 16px;">
+
+                    <div style="display: flex; justify-content: space-between;">
+                        <i class="fa fa-calendar"></i>
+                        <span>2023-10-10</span>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between;">
+                        <i class="fa fa-clock-o"></i>
+                        <span>10:30 - 11:30</span>
+                    </div>
+
                 </div>
 
             </div>
@@ -211,12 +231,7 @@
                 style="display: flex; flex-direction: column; gap: 20px; box-shadow: 3px 10px 40px lightgrey; padding-block: 40px; padding-inline: 40px;">
 
 
-                <div
-                    style="display: flex; border-radius: 100%; width: 50px; height: 50px; background-color: azure; align-items: center; justify-content: center;">
 
-                    <p>4 Oct</p>
-
-                </div>
                 <div>
                     <p style="font-size: 24px;">This is the first event</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -224,14 +239,29 @@
                     </p>
 
                     <div style="display: flex; justify-content: space-evenly">
-                        <button class="col-6 btn btn-primary btn-md">Volunteer</button>
-                        <button class="col-6 btn btn-primary btn-md">Donate</button>
+                        <a href="#" class="btn btn-primary" data-toggle="modal"
+                            data-target="#volunteerModal">VOLUNTEER</a>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal">Donate</a>
                     </div>
 
 
                     <hr />
 
                     <p>Location: Lorem ipsum</p>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 10px; color: #4831D4; font-size: 16px;">
+
+                    <div style="display: flex; justify-content: space-between;">
+                        <i class="fa fa-calendar"></i>
+                        <span>2023-10-10</span>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between;">
+                        <i class="fa fa-clock-o"></i>
+                        <span>10:30 - 11:30</span>
+                    </div>
+
                 </div>
 
             </div>
@@ -239,12 +269,6 @@
                 style="display: flex; flex-direction: column; gap: 20px; box-shadow: 3px 10px 40px lightgrey; padding-block: 40px; padding-inline: 40px;">
 
 
-                <div
-                    style="display: flex; border-radius: 100%; width: 50px; height: 50px; background-color: azure; align-items: center; justify-content: center;">
-
-                    <p>4 Oct</p>
-
-                </div>
                 <div>
                     <p style="font-size: 24px;">This is the first event</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -252,14 +276,29 @@
                     </p>
 
                     <div style="display: flex; justify-content: space-evenly">
-                        <button class="col-6 btn btn-primary btn-md">Volunteer</button>
-                        <button class="col-6 btn btn-primary btn-md">Donate</button>
+                        <a href="#" class="btn btn-primary" data-toggle="modal"
+                            data-target="#volunteerModal">VOLUNTEER</a>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal">Donate</a>
                     </div>
 
 
                     <hr />
 
                     <p>Location: Lorem ipsum</p>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 10px; color: #4831D4; font-size: 16px;">
+
+                    <div style="display: flex; justify-content: space-between;">
+                        <i class="fa fa-calendar"></i>
+                        <span>2023-10-10</span>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between;">
+                        <i class="fa fa-clock-o"></i>
+                        <span>10:30 - 11:30</span>
+                    </div>
+
                 </div>
 
             </div>
@@ -267,12 +306,7 @@
                 style="display: flex; flex-direction: column; gap: 20px; box-shadow: 3px 10px 40px lightgrey; padding-block: 40px; padding-inline: 40px;">
 
 
-                <div
-                    style="display: flex; border-radius: 100%; width: 50px; height: 50px; background-color: azure; align-items: center; justify-content: center;">
 
-                    <p>4 Oct</p>
-
-                </div>
                 <div>
                     <p style="font-size: 24px;">This is the first event</p>
                     <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
@@ -281,14 +315,29 @@
 
 
                     <div style="display: flex; justify-content: space-evenly">
-                        <button class="col-6 btn btn-primary btn-md">Volunteer</button>
-                        <button class="col-6 btn btn-primary btn-md">Donate</button>
+                        <a href="#" class="btn btn-primary" data-toggle="modal"
+                            data-target="#volunteerModal">VOLUNTEER</a>
+                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal">Donate</a>
                     </div>
 
 
                     <hr />
 
                     <p>Location: Lorem ipsum</p>
+                </div>
+
+                <div style="display: flex; flex-direction: column; gap: 10px; color: #4831D4; font-size: 16px;">
+
+                    <div style="display: flex; justify-content: space-between;">
+                        <i class="fa fa-calendar"></i>
+                        <span>2023-10-10</span>
+                    </div>
+
+                    <div style="display: flex; justify-content: space-between;">
+                        <i class="fa fa-clock-o"></i>
+                        <span>10:30 - 11:30</span>
+                    </div>
+
                 </div>
 
             </div>
@@ -796,6 +845,79 @@
     </footer> <!-- main-footer -->
 
 
+
+
+    <!-- Donate Modal -->
+    <div class="modal fade" id="volunteerModal" tabindex="-1" role="dialog" aria-labelledby="volunteerModalLabel"
+        aria-hidden="true">
+
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="volunteerModalLabel">VOLUNTEER</h4>
+                </div>
+                <div class="modal-body">
+
+                    <form class="form-donation">
+
+                        <h3 class="title-style-1 text-center">Thank you for Volunteering <span
+                                class="title-under"></span> </h3>
+
+                        <div class="row">
+
+                            <div class="form-group col-md-12 ">
+                                <input type="text" class="form-control" id="name" name="name" placeholder="Name">
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="form-group col-md-12 ">
+                                <input type="text" class="form-control" id="email" name="email" placeholder="Email">
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="form-group col-md-12 ">
+                                <input type="text" class="form-control" id="phone" name="phone Number"
+                                    placeholder="Phone Number">
+                            </div>
+
+                        </div>
+                        <div class="row">
+
+                            <div class="form-group col-md-12 ">
+                                <textarea id="whyVoluteer" class="form-control" rows="10" style="resize: none;"
+                                    name="whyVolunteer" placeholder="Why do you want to become a volunteer"></textarea>
+                            </div>
+
+                        </div>
+
+
+
+                        <div class="row">
+
+                            <div class="form-group col-md-12">
+                                <button type="submit" class="btn btn-primary pull-right"
+                                    name="volunteer">VOLUNTEER</button>
+                            </div>
+
+                        </div>
+
+
+
+
+
+                    </form>
+
+                </div>
+            </div>
+        </div>
+
+    </div> <!-- /.modal -->
 
 
     <!-- Donate Modal -->
