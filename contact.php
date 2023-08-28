@@ -1,3 +1,4 @@
+<?php include "admin/includes/config.php"; ?>
 <!DOCTYPE html>
 <html class="no-js">
     <head>
@@ -89,15 +90,23 @@
 
                   <ul class="nav navbar-nav">
 
-                    <li><a href="index.html">HOME</a></li>
-                    <li><a href="about.html">ABOUT</a></li>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="about.php">ABOUT</a></li>
                     <li class="has-child"><a href="#">BLOGS</a>
 
                         <ul class="submenu">
-                           <li class="submenu-item"><a href="causes.html">Recent Works </a></li>
-                           <li class="submenu-item"><a href="causes-single.html">Engaged Activities </a></li>
-                           <li class="submenu-item"><a href="causes-single.html">Research Works  </a></li>
-                           <li class="submenu-item"><a href="causes-single.html">Proposed Study </a></li>
+                        <?php
+
+                                    if (isset($conn)) {
+                                        $result = $conn->query("SELECT * FROM CATEGORY");
+                                        if ($result->num_rows > 0) {
+                                            while ($row = $result->fetch_assoc()) {
+                                                echo "<li class='submenu-item'><a href='causes.php'>" . $row["name"] . "</a></li>";
+                                            }
+                                        }
+
+                                    }
+                                    ?>
                         </ul>
   
                       </li>
