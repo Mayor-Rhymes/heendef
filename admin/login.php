@@ -1,8 +1,8 @@
-<?php 
+<?php
 include 'includes/config.php';
 include 'controllers/login.php';
 error_reporting(0);
- ?>
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -20,7 +20,9 @@ error_reporting(0);
 
   <!-- Google Fonts -->
   <link href="https://fonts.gstatic.com" rel="preconnect">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i" rel="stylesheet">
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Nunito:300,300i,400,400i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
 
   <!-- Vendor CSS Files -->
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
@@ -66,36 +68,36 @@ error_reporting(0);
                   <div class="pt-4 pb-2">
                     <h5 class="card-title text-center pb-0 fs-4">Login to Your Account</h5>
                   </div>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-$(document).ready(function(){
-$("#login").click(function(){
-var uname = $("#username").val();
-var pass = $("#password").val();
-var dataString = 'uname1='+ uname + '&pass1='+ pass;
-if(uname==''||pass=='')
-{
-$("#display").html("Please Fill All Fields");
-}
-else
-{
-$.ajax({
-type: "POST",
-url: "controllers/login.php",
-data: dataString,
-cache: false,
-success: function(result){
-$("#display").html(result);
-}
-});
-}
-return false;
-});
-});
-</script>
-     <center><div id="message"></div></center>
+                  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+                  <script>
+                    $(document).ready(function () {
+                      $("#login").click(function () {
+                        var uname = $("#username").val();
+                        var pass = $("#password").val();
+                        var dataString = 'uname1=' + uname + '&pass1=' + pass;
+                        if (uname == '' || pass == '') {
+                          $("#display").html("Please Fill All Fields");
+                        }
+                        else {
+                          $.ajax({
+                            type: "POST",
+                            url: "controllers/login.php",
+                            data: dataString,
+                            cache: false,
+                            success: function (result) {
+                              $("#display").html(result);
+                            }
+                          });
+                        }
+                        return false;
+                      });
+                    });
+                  </script>
+                  <center>
+                    <div id="message"></div>
+                  </center>
                   <form class="row g-3 needs-validation" novalidate method="POST" enctype="multipart/form-data">
-    <div id="display"></div>
+                    <div id="display"></div>
                     <div class="col-12">
                       <label for="yourUsername" class="form-label">Username</label>
                       <div class="input-group has-validation">
@@ -111,14 +113,15 @@ return false;
                       <div class="invalid-feedback">Please enter your password!</div>
                     </div>
 
-                   
+
                     <div class="col-12">
-                      <button class="btn btn-primary w-100" type="button" name="login" id="login">Login <i class="bi bi-door-open"></i></button>
+                      <button class="btn btn-primary w-100" type="button" name="login" id="login">Login <i
+                          class="bi bi-door-open"></i></button>
                     </div>
 
-                   
-                     <div class="col-12">
-                     <!-- <p class="small mb-0">Forgot Password? <a href="forgot">Reset Password</a></p>-->
+
+                    <div class="col-12">
+                      <!-- <p class="small mb-0">Forgot Password? <a href="forgot">Reset Password</a></p>-->
                     </div>
                   </form>
 
@@ -135,7 +138,8 @@ return false;
     </div>
   </main><!-- End #main -->
 
-  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i class="bi bi-arrow-up-short"></i></a>
+  <a href="#" class="back-to-top d-flex align-items-center justify-content-center"><i
+      class="bi bi-arrow-up-short"></i></a>
 
   <!-- Vendor JS Files -->
   <script src="assets/vendor/apexcharts/apexcharts.min.js"></script>

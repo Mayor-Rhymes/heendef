@@ -1,5 +1,6 @@
 <?php
-require '../includes/config.php';
+// require '../includes/config.php';
+include(dirname(__DIR__).'/includes/config.php');
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $name = $_POST['name'];
     $email = $_POST['email'];

@@ -91,7 +91,7 @@
           <span>Register</span>
         </a>
       </li><!-- End Register Page Nav -->
-<?php //if (empty($_SESSION['id'])): ?>
+<?php if (empty($_SESSION['id'])): ?>
    <li class="nav-item">
         <a class="nav-link collapsed" href="pages-login.html">
           <i class="bi bi-box-arrow-in-right"></i>
@@ -99,8 +99,8 @@
         </a>
       </li><!-- End Login Page Nav -->
 
-<?php //endif ?>
-     <?php //if (!empty($_SESSION['id'])): ?>
+<?php endif ?>
+     <?php if (!empty($_SESSION['id'])): ?>
    <li class="nav-item">
         <a class="nav-link collapsed" href="login">
           <i class="bi bi-box-arrow-in-left"></i>
@@ -108,7 +108,7 @@
         </a>
       </li><!-- End Login Page Nav -->
 
-<?php //endif ?>
+<?php endif ?>
   
 
       

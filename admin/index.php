@@ -64,7 +64,7 @@
         <!-- Left side columns -->
         <div class="col-lg-8">
           <div class="row">
-<?php //$chblg = mysqli_query($conn,"SELECT * FROM blog"); $chnum = mysqli_num_rows($chblg);?>
+<?php $chblg = mysqli_query($conn,"SELECT * FROM blog"); $chnum = mysqli_num_rows($chblg);?>
             <!-- Sales Card -->
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card sales-card">
@@ -76,7 +76,7 @@
                       <i class="bi bi-pencil"></i>
                     </div>
                     <div class="ps-3">
-                      <h6><?php //echo htmlentities($chnum); ?></h6>
+                      <h6><?php echo htmlentities($chnum); ?></h6>
                    
 
                     </div>
@@ -89,7 +89,7 @@
             <!-- Revenue Card -->
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card revenue-card">
-<?php //$chevt = mysqli_query($conn,"SELECT * FROM events"); $evt = mysqli_num_rows($chevt);?>
+<?php $chevt = mysqli_query($conn,"SELECT * FROM events"); $evt = mysqli_num_rows($chevt);?>
 
                 <div class="card-body">
                   <h5 class="card-title">Events <span> | Upcoming</span></h5>
@@ -99,7 +99,7 @@
                       <i class="bi bi-calendar"></i>
                     </div>
                     <div class="ps-3">
-                      <h6><?php //echo htmlentities($evt); ?></h6>
+                      <h6><?php echo htmlentities($evt); ?></h6>
                      
                     </div>
                   </div>
@@ -111,7 +111,7 @@
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card sales-card">
                 <div class="card-body">
-         <?php //$categories = mysqli_query($conn,"SELECT * FROM category"); $cat = mysqli_num_rows($categories);?>
+         <?php $categories = mysqli_query($conn,"SELECT * FROM category"); $cat = mysqli_num_rows($categories);?>
                   <h5 class="card-title">Categories <span> | Blog</span></h5>
 
                   <div class="d-flex align-items-center">
@@ -119,7 +119,7 @@
                       <i class="bi bi-table"></i>
                     </div>
                     <div class="ps-3">
-                      <h6><?php //echo htmlentities($cat); ?></h6>
+                      <h6><?php echo htmlentities($cat); ?></h6>
                    
 
                     </div>
@@ -132,7 +132,7 @@
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card sales-card">
                 <div class="card-body">
-            <?php //$chvt = mysqli_query($conn,"SELECT * FROM events"); $cvt = mysqli_num_rows($chvt);?>
+            <?php $chvt = mysqli_query($conn,"SELECT * FROM events"); $cvt = mysqli_num_rows($chvt);?>
                   <h5 class="card-title">Events <span> | Past</span></h5>
 
                   <div class="d-flex align-items-center">
@@ -140,7 +140,7 @@
                       <i class="bi bi-calendar"></i>
                     </div>
                     <div class="ps-3">
-                      <h6><?php //echo htmlentities($cvt); ?></h6>
+                      <h6><?php echo htmlentities($cvt); ?></h6>
                    
 
                     </div>
@@ -153,7 +153,7 @@
             <div class="col-xxl-4 col-md-6">
               <div class="card info-card sales-card">
                 <div class="card-body">
-          <?php //$volunteer = mysqli_query($conn,"SELECT * FROM volunteers"); $vol = mysqli_num_rows($volunteer);?>
+          <?php $volunteer = mysqli_query($conn,"SELECT * FROM volunteers"); $vol = mysqli_num_rows($volunteer);?>
                   <h5 class="card-title">Volunteers <span> </span></h5>
 
                   <div class="d-flex align-items-center">
@@ -161,7 +161,7 @@
                       <i class="bi bi-heart"></i>
                     </div>
                     <div class="ps-3">
-                      <h6><?php //echo htmlentities($vol); ?></h6>
+                      <h6><?php echo htmlentities($vol); ?></h6>
                    
 
                     </div>
@@ -175,13 +175,13 @@
               <div class="card info-card sales-card">
                 <div class="card-body">
                   <h5 class="card-title">Admins <span></span></h5>
-<?php //$admins = mysqli_query($conn,"SELECT * FROM admin"); $val = mysqli_num_rows($admins);?>
+<?php $admins = mysqli_query($conn,"SELECT * FROM admin"); $val = mysqli_num_rows($admins);?>
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
                       <i class="bi bi-person"></i>
                     </div>
                     <div class="ps-3">
-                      <h6><?php //echo htmlentities($val); ?></h6>
+                      <h6><?php echo htmlentities($val); ?></h6>
                    
 
                     </div>
