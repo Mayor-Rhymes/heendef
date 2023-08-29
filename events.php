@@ -753,7 +753,7 @@
                 </div>
                 <div class="modal-body">
 
-                    <form class="form-donation">
+                    <form class="form-donation" action="volunteercontrol.php" method="post">
 
                         <h3 class="title-style-1 text-center">Thank you for Volunteering <span
                                 class="title-under"></span> </h3>
@@ -775,7 +775,7 @@
                         <div class="row">
 
                             <div class="form-group col-md-12 ">
-                                <input type="text" class="form-control" id="phone" name="phone Number"
+                                <input type="text" class="form-control" id="phone" name="phoneNumber"
                                     placeholder="Phone Number">
                             </div>
 
@@ -783,7 +783,7 @@
                         <div class="row">
 
                             <div class="form-group col-md-12 ">
-                                <textarea id="whyVoluteer" class="form-control" rows="10" style="resize: none;"
+                                <textarea id="whyVolunteer" class="form-control" rows="10" style="resize: none;"
                                     name="whyVolunteer" placeholder="Why do you want to become a volunteer?"></textarea>
                             </div>
 
