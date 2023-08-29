@@ -143,209 +143,91 @@
 
 
 
-    <!-- Hero For Upcoming Events -->
+
+    <!--Hero For The Events Page -->
+
+
+    <div class="page-heading text-center">
+
+        <div class="container zoomIn animated">
+
+            <h1 class="page-title">EVENTS<span class="title-under"></span></h1>
+            <p class="page-description">
+                We hold impactful events that bring awareness to the lack and needs of the underpriviledged. <br />
+                You can also volunteer
+            </p>
+
+        </div>
+
+    </div> <!-- /. event hero -->
+
+
+
+
+    <!-- Events Grid -->
 
     <div class="container">
 
         <h4 class="text-center" style="font-size: 40px; color: black;">Heendef Events</h4>
         <!-- events grid -->
         <div class="event-container">
+            <?php
+            if (isset($conn)) {
 
-            <div
-                style="display: flex; flex-direction: column; gap: 20px; box-shadow: 3px 10px 40px lightgrey; padding-block: 40px; padding-inline: 40px;">
+                $result = $conn->query("SELECT * FROM EVENTS");
 
+                if ($result->num_rows > 0) {
 
+                    while ($row = $result->fetch_assoc()) {
 
-                <div>
-                    <p style="font-size: 24px;">This is the first event</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                    </p>
-                    <div style="display: flex; justify-content: space-evenly">
-                        <a href="#" class="btn btn-primary" data-toggle="modal"
-                            data-target="#volunteerModal">VOLUNTEER</a>
-                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal">Donate</a>
-                    </div>
+                        echo "<div style='display: flex; flex-direction: column; gap: 20px; box-shadow: 3px 10px 40px lightgrey; padding-block: 40px; padding-inline: 40px;'>
+        
+        
+        
+                        <div>
+                            <p style='font-size: 24px;'>" . $row['title'] . "</p>
+                            <p>" . $row['body'] .
+                            "</p>
+                            <div style='display: flex; justify-content: space-evenly'>
+                                <a href='#' class='btn btn-primary' data-toggle='modal'
+                                    data-target='#volunteerModal'>VOLUNTEER</a>
+                                <a href='#' class='btn btn-primary' data-toggle='modal' data-target='#donateModal'>Donate</a>
+                            </div>
+        
+        
+        
+                            <hr />
+        
+                            <p>Location:" . " " . $row['location'] . "</p>
+                        </div>
+        
+                        <div style='display: flex; flex-direction: column; gap: 10px; color: #4831D4; font-size: 16px;'>
+        
+                            <div style='display: flex; justify-content: space-between;'>
+                                <i class='fa fa-calendar'></i>
+                                <span>" . $row['evtDate'] . "</span>
+                            </div>
+        
+                            <div style='display: flex; justify-content: space-between;'>
+                                <i class='fa fa-clock-o'></i>
+                                <span>" . $row['start'] . "-" . $row['stop'] . "</span>
+                            </div>
+        
+                        </div>
+        
+                    </div>";
 
+                    }
+                }
 
+            }
 
-                    <hr />
-
-                    <p>Location: Lorem ipsum</p>
-                </div>
-
-                <div style="display: flex; flex-direction: column; gap: 10px; color: #4831D4; font-size: 16px;">
-
-                    <div style="display: flex; justify-content: space-between;">
-                        <i class="fa fa-calendar"></i>
-                        <span>2023-10-10</span>
-                    </div>
-
-                    <div style="display: flex; justify-content: space-between;">
-                        <i class="fa fa-clock-o"></i>
-                        <span>10:30 - 11:30</span>
-                    </div>
-
-                </div>
-
-            </div>
-            <div
-                style="display: flex; flex-direction: column; gap: 20px; box-shadow: 3px 10px 40px lightgrey; padding-block: 40px; padding-inline: 40px;">
-
-
-
-                <div>
-                    <p style="font-size: 24px;">This is the first event</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                    </p>
-
-                    <div style="display: flex; justify-content: space-evenly">
-                        <a href="#" class="btn btn-primary" data-toggle="modal"
-                            data-target="#volunteerModal">VOLUNTEER</a>
-                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal">Donate</a>
-                    </div>
-
-
-                    <hr />
-
-                    <p>Location: Lorem ipsum</p>
-                </div>
-
-                <div style="display: flex; flex-direction: column; gap: 10px; color: #4831D4; font-size: 16px;">
-
-                    <div style="display: flex; justify-content: space-between;">
-                        <i class="fa fa-calendar"></i>
-                        <span>2023-10-10</span>
-                    </div>
-
-                    <div style="display: flex; justify-content: space-between;">
-                        <i class="fa fa-clock-o"></i>
-                        <span>10:30 - 11:30</span>
-                    </div>
-
-                </div>
-
-            </div>
-            <div
-                style="display: flex; flex-direction: column; gap: 20px; box-shadow: 3px 10px 40px lightgrey; padding-block: 40px; padding-inline: 40px;">
+            ?>
 
 
 
-                <div>
-                    <p style="font-size: 24px;">This is the first event</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                    </p>
-
-                    <div style="display: flex; justify-content: space-evenly">
-                        <a href="#" class="btn btn-primary" data-toggle="modal"
-                            data-target="#volunteerModal">VOLUNTEER</a>
-                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal">Donate</a>
-                    </div>
-
-
-                    <hr />
-
-                    <p>Location: Lorem ipsum</p>
-                </div>
-
-                <div style="display: flex; flex-direction: column; gap: 10px; color: #4831D4; font-size: 16px;">
-
-                    <div style="display: flex; justify-content: space-between;">
-                        <i class="fa fa-calendar"></i>
-                        <span>2023-10-10</span>
-                    </div>
-
-                    <div style="display: flex; justify-content: space-between;">
-                        <i class="fa fa-clock-o"></i>
-                        <span>10:30 - 11:30</span>
-                    </div>
-
-                </div>
-
-            </div>
-            <div
-                style="display: flex; flex-direction: column; gap: 20px; box-shadow: 3px 10px 40px lightgrey; padding-block: 40px; padding-inline: 40px;">
-
-
-                <div>
-                    <p style="font-size: 24px;">This is the first event</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                    </p>
-
-                    <div style="display: flex; justify-content: space-evenly">
-                        <a href="#" class="btn btn-primary" data-toggle="modal"
-                            data-target="#volunteerModal">VOLUNTEER</a>
-                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal">Donate</a>
-                    </div>
-
-
-                    <hr />
-
-                    <p>Location: Lorem ipsum</p>
-                </div>
-
-                <div style="display: flex; flex-direction: column; gap: 10px; color: #4831D4; font-size: 16px;">
-
-                    <div style="display: flex; justify-content: space-between;">
-                        <i class="fa fa-calendar"></i>
-                        <span>2023-10-10</span>
-                    </div>
-
-                    <div style="display: flex; justify-content: space-between;">
-                        <i class="fa fa-clock-o"></i>
-                        <span>10:30 - 11:30</span>
-                    </div>
-
-                </div>
-
-            </div>
-            <div
-                style="display: flex; flex-direction: column; gap: 20px; box-shadow: 3px 10px 40px lightgrey; padding-block: 40px; padding-inline: 40px;">
-
-
-
-                <div>
-                    <p style="font-size: 24px;">This is the first event</p>
-                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut
-                        labore
-                    </p>
-
-
-                    <div style="display: flex; justify-content: space-evenly">
-                        <a href="#" class="btn btn-primary" data-toggle="modal"
-                            data-target="#volunteerModal">VOLUNTEER</a>
-                        <a href="#" class="btn btn-primary" data-toggle="modal" data-target="#donateModal">Donate</a>
-                    </div>
-
-
-                    <hr />
-
-                    <p>Location: Lorem ipsum</p>
-                </div>
-
-                <div style="display: flex; flex-direction: column; gap: 10px; color: #4831D4; font-size: 16px;">
-
-                    <div style="display: flex; justify-content: space-between;">
-                        <i class="fa fa-calendar"></i>
-                        <span>2023-10-10</span>
-                    </div>
-
-                    <div style="display: flex; justify-content: space-between;">
-                        <i class="fa fa-clock-o"></i>
-                        <span>10:30 - 11:30</span>
-                    </div>
-
-                </div>
-
-            </div>
         </div>
-
-
-
-    </div>
+    </div> <!-- /. events grid -->
 
     <div class="section-home about-us fadeIn animated">
 
@@ -365,7 +247,8 @@
 
                             <p>At HEENDEF, our mission is to create positive and lasting impacts on the health,
                                 environment, and overall
-                                development of communities by implementing innovative projects, fostering education and
+                                development of communities by implementing innovative projects, fostering education
+                                and
                                 awareness, and encouraging
                                 sustainable practices.
                             </p>
@@ -387,7 +270,8 @@
                         <div class="col-details">
 
                             <p>
-                                HEENDEF, plays a pivotal role in donations by mobilizing resources and channeling them
+                                HEENDEF, plays a pivotal role in donations by mobilizing resources and channeling
+                                them
                                 to various
                                 charitable causes, making a positive impact on underserved communities and social
                                 initiatives.
@@ -409,7 +293,8 @@
                         <div class="col-details">
 
                             <p>
-                                HEENDEF contributes to research by supporting and funding projects that address critical
+                                HEENDEF contributes to research by supporting and funding projects that address
+                                critical
                                 social and
                                 environmental issues, promoting scientific inquiry and innovation for sustainable
                                 development.
@@ -470,14 +355,16 @@
 
                         <div class="on-hover hidden-xs">
 
-                            <p> HEENDEF plays a pivotal role in promoting healthy feeding by implementing programs that
+                            <p> HEENDEF plays a pivotal role in promoting healthy feeding by implementing programs
+                                that
                                 ensure access to nutritious meals and fostering awareness about proper dietary
                                 practices.</p>
                             <p>At HEENDEF, we also ensure that there is access to clean and safe drinking water by
                                 implementing projects
                                 that provide water purification systems, and education on proper water hygiene
                                 practices.</p>
-                            <p>HEENDEF, is also dedicated to enhancing social care by implementing programs that provide
+                            <p>HEENDEF, is also dedicated to enhancing social care by implementing programs that
+                                provide
                                 assistance, support, and resources to vulnerable individuals and marginalized
                                 communities.</p>
                         </div>
@@ -503,7 +390,8 @@
 
                             <p> HEENDEF, contributes to research by supporting and funding projects that address
                                 critical social
-                                and environmental issues, promoting scientific inquiry and innovation for sustainable
+                                and environmental issues, promoting scientific inquiry and innovation for
+                                sustainable
                                 development.</p>
 
 
@@ -553,7 +441,8 @@
                             Our dedicated HealthCare Initiative strives to make quality healthcare accessible and
                             affordable to all,
                             regardless of their socioeconomic background.
-                            Through our relentless efforts, we aim to create a healthier, happier, and more equitable
+                            Through our relentless efforts, we aim to create a healthier, happier, and more
+                            equitable
                             society.
                             <br><br>
                             <br><br>
@@ -576,8 +465,10 @@
 
                         <h4 class="cause-title">Social Care</h4>
                         <div class="cause-details">
-                            Social care goes beyond providing basic necessities; it encompasses a range of activities
-                            and services designed to enhance the well-being and quality of life for individuals facing
+                            Social care goes beyond providing basic necessities; it encompasses a range of
+                            activities
+                            and services designed to enhance the well-being and quality of life for individuals
+                            facing
                             challenges.
                             It involves offering emotional support, access to education
                             and healthcare, promoting social inclusion, and empowering communities to become
@@ -708,7 +599,8 @@
                             <div class="footer-content">
 
                                 <p>
-                                    <strong>HEENDEF</strong> Health, Environment and Development Foundation (HEENDEF) is
+                                    <strong>HEENDEF</strong> Health, Environment and Development Foundation
+                                    (HEENDEF) is
                                     a dynamic non-profit
                                     organization that was established on March 7, 2005, with the primary aim of
                                     promoting and advancing
@@ -737,7 +629,8 @@
                                 <ul class="tweets list-unstyled">
                                     <li class="tweet">
 
-                                        Technical Adviser Ondo State Ministry of Health, State Malaria Eradication and
+                                        Technical Adviser Ondo State Ministry of Health, State Malaria Eradication
+                                        and
                                         Control program Annual Operational Planning (AOP for 2018), 2017; (AOP for
                                         2020), 2019.
 
@@ -847,7 +740,7 @@
 
 
 
-    <!-- Donate Modal -->
+    <!-- Volunteer Modal -->
     <div class="modal fade" id="volunteerModal" tabindex="-1" role="dialog" aria-labelledby="volunteerModalLabel"
         aria-hidden="true">
 
@@ -891,7 +784,7 @@
 
                             <div class="form-group col-md-12 ">
                                 <textarea id="whyVoluteer" class="form-control" rows="10" style="resize: none;"
-                                    name="whyVolunteer" placeholder="Why do you want to become a volunteer"></textarea>
+                                    name="whyVolunteer" placeholder="Why do you want to become a volunteer?"></textarea>
                             </div>
 
                         </div>
