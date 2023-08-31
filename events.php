@@ -121,7 +121,7 @@
                                 </ul>
 
                             </li>
-                            <li><a href="gallery.html">GALLERY</a></li>
+                            <li><a href="gallery.php">GALLERY</a></li>
                             <li><a href="admin/index.php">SEE YOUR DOCTOR</a></li>
                             <li><a href="contact.php">CONTACT</a></li>
                             <li><a class="is-active" href="event.php">EVENT</a></li>
@@ -166,9 +166,9 @@
 
     <!-- Events Grid -->
 
-    <div class="container">
+    <div class="container zoomIn animated">
 
-        <h4 class="text-center" style="font-size: 40px; color: black;">Heendef Events</h4>
+        <h4 class="text-center" style="font-size: 40px; color: black;">Upcoming</h4>
         <!-- events grid -->
         <div class="event-container">
             <?php
@@ -228,6 +228,72 @@
 
         </div>
     </div> <!-- /. events grid -->
+
+
+
+    <div class="container zoomIn animated" style="margin-top: 30px;">
+
+        <h4 class="text-center" style="font-size: 40px; color: black; margin-bottom: 30px;">Recent</h4>
+        <!-- events grid -->
+        <div class="event-container">
+            <?php
+            if (isset($conn)) {
+
+                $result = $conn->query("SELECT * FROM EVENTS");
+
+                if ($result->num_rows > 0) {
+
+                    while ($row = $result->fetch_assoc()) {
+
+                        echo "<div style='display: flex; flex-direction: column; gap: 20px; box-shadow: 3px 10px 40px lightgrey; padding-block: 40px; padding-inline: 40px;'>
+        
+        
+        
+                        <div>
+                            <p style='font-size: 24px;'>" . $row['title'] . "</p>
+                            <p>" . $row['body'] .
+                            "</p>
+                            <div style='display: flex; justify-content: space-evenly'>
+                                <a href='#' class='btn btn-primary' data-toggle='modal'
+                                    data-target='#volunteerModal'>VOLUNTEER</a>
+                                <a href='#' class='btn btn-primary' data-toggle='modal' data-target='#donateModal'>Donate</a>
+                            </div>
+        
+        
+        
+                            <hr />
+        
+                            <p>Location:" . " " . $row['location'] . "</p>
+                        </div>
+        
+                        <div style='display: flex; flex-direction: column; gap: 10px; color: #4831D4; font-size: 16px;'>
+        
+                            <div style='display: flex; justify-content: space-between;'>
+                                <i class='fa fa-calendar'></i>
+                                <span>" . $row['evtDate'] . "</span>
+                            </div>
+        
+                            <div style='display: flex; justify-content: space-between;'>
+                                <i class='fa fa-clock-o'></i>
+                                <span>" . $row['start'] . "-" . $row['stop'] . "</span>
+                            </div>
+        
+                        </div>
+        
+                    </div>";
+
+                    }
+                }
+
+            }
+
+            ?>
+
+
+
+        </div>
+    </div> <!-- /. events grid -->
+
 
     <div class="section-home about-us fadeIn animated">
 

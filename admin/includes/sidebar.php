@@ -49,6 +49,15 @@
             </a>
           </li>
           <li>
+            <a href="album">
+              <i class="bi bi-tv"></i><span>Album</span>
+            </a>
+          </li>
+            <a href="album-images">
+              <i class="bi bi-tv"></i><span>Album Images</span>
+            </a>
+          </li>
+          <li>
             <a href="text">
               <i class="bi bi-circle"></i><span>Text</span>
             </a>

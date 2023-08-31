@@ -110,7 +110,7 @@
                         </ul>
   
                       </li>
-                    <li><a href="gallery.html">GALLERY</a></li>
+                    <li><a href="gallery.php">GALLERY</a></li>
                     <li><a class="is-active"  href="contact.html">CONTACT</a></li>
 
                   </ul>
