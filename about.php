@@ -96,7 +96,7 @@
                         <ul class="nav navbar-nav">
 
                             <li><a href="index.php">HOME</a></li>
-                            <li><a class="is-active" href="about.html">ABOUT</a></li>
+                            <li><a class="is-active" href="about.php">ABOUT</a></li>
                             <li class="has-child"><a href="#">BLOGS</a>
 
                                 <ul class="submenu">
@@ -115,9 +115,9 @@
                                 </ul>
 
                             </li>
-                            <li><a href="gallery.html">GALLERY</a></li>
+                            <li><a href="gallery.php">GALLERY</a></li>
                             <li><a href="admin/index.php">SEE YOUR DOCTOR</a></li>
-                            <li><a href="contact.html">CONTACT</a></li>
+                            <li><a href="contact.php">CONTACT</a></li>
                             <li><a href="events.php">EVENTS</a></li>
 
                         </ul>

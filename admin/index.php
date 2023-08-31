@@ -158,10 +158,30 @@
 
                   <div class="d-flex align-items-center">
                     <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
-                      <i class="bi bi-heart"></i>
+                      <i class="bi bi-people"></i>
                     </div>
                     <div class="ps-3">
                       <h6><?php echo htmlentities($vol); ?></h6>
+                   
+
+                    </div>
+                  </div>
+                </div>
+
+              </div>
+            </div><!-- End Sales Card -->
+            <!-- Sales Card -->
+            <div class="col-xxl-4 col-md-6">
+              <div class="card info-card sales-card">
+                <div class="card-body">
+                  <h5 class="card-title">Album <span></span></h5>
+<?php $album = mysqli_query($conn,"SELECT * FROM album"); $albumCount = mysqli_num_rows($album);?>
+                  <div class="d-flex align-items-center">
+                    <div class="card-icon rounded-circle d-flex align-items-center justify-content-center">
+                      <i class="bi bi-images"></i>
+                    </div>
+                    <div class="ps-3">
+                      <h6><?php echo htmlentities($albumCount); ?></h6>
                    
 
                     </div>

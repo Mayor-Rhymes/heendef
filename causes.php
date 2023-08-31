@@ -99,7 +99,7 @@
                         <ul class="nav navbar-nav">
 
                             <li><a href="index.php">HOME</a></li>
-                            <li><a href="about.html">ABOUT</a></li>
+                            <li><a href="about.php">ABOUT</a></li>
                             <li class="has-child"><a class="is-active" href="#">CAUSES</a>
 
                                 <ul class="submenu">
@@ -118,9 +118,9 @@
                                 </ul>
 
                             </li>
-                            <li><a href="gallery.html">GALLERY</a></li>
-                            <li><a href="contact.html">CONTACT</a></li>
-                            <li><a href="admin.html">ADMIN</a></li>
+                            <li><a href="gallery.php">GALLERY</a></li>
+                            <li><a href="contact.php">CONTACT</a></li>
+                            <!-- <li><a href="admin.html">ADMIN</a></li> -->
 
                         </ul>
 

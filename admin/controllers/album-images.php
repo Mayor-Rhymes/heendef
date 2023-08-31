@@ -1,11 +1,17 @@
 <?php
 error_reporting(0);
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["image"])) {
-    $title = $_POST['title'];
-    $subtitle = $_POST['subtitle'];
-    $title = mysqli_real_escape_string($conn,$title);
-     $subtitle = mysqli_real_escape_string($conn,$subtitle);
-    $targetDirectory = "uploads/carousel/"; // Change this to the directory where you want to store the images
+    $name = $_POST['name'];
+    $albumName = $_POST['album-name'];
+
+    $sql = "SELECT id FROM album WHERE title = $albumName";
+    $query = mysqli_query($conn, $sql);
+    $row = mysqli_fetch_row($query);
+    $albumId = $row[0];
+    $name = mysqli_real_escape_string($conn, $name);
+    $albumName = mysqli_real_escape_string($conn, $albumName);
+    //Change this to the directory where you want to store the images
+    $targetDirectory = "uploads/album-images/"; 
     $targetFile = $targetDirectory . basename($_FILES["image"]["name"]);
     $imageFileType = strtolower(pathinfo($targetFile, PATHINFO_EXTENSION));
 
@@ -40,15 +46,16 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["image"])) {
 
     $imagePath = mysqli_real_escape_string($conn, $targetFile);
     $imageName = mysqli_real_escape_string($conn, $_FILES["image"]["name"]);
-    $active = 1;
-    $sql = "INSERT INTO carousel (title, description, image_name, image_path, active) VALUES ('$title','$subtitle', '$imageName', '$imagePath', '$active')";
-    $exec = mysqli_query($conn,$sql);
+    // $active = 1;
+    $sql = "INSERT INTO images (name, album_id, path) VALUES ('$name', '$albumId', '$imagePath')";
+    $exec = mysqli_query($conn, $sql);
     if($exec){
+        
         echo "<script>alert('updated successfully')</script>";
     }else{
-        exit("Error");
+        echo ("Error");
     }
-    
-    header("location:carousel");
+
+    header("location:album-images");
 }
 ?>
