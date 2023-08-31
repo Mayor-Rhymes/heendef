@@ -120,7 +120,7 @@
                     <li><a href="events.php">EVENTS</a></li>
                     <li><a href="gallery.php">GALLERY</a></li>
                     <li><a href="contact.php">CONTACT</a></li>
-                    <li><a href="admin/index.php">CONSULT A DOCTOR</a></li>
+                    <li><a href="consult.php">CONSULT A DOCTOR</a></li>
 
                     
 

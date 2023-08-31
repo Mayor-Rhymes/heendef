@@ -175,19 +175,20 @@
             if (isset($conn)) {
 
                 $result = $conn->query("SELECT * FROM EVENTS");
-
+                $current_date = date("Y-m-d");
                 if ($result->num_rows > 0) {
 
                     while ($row = $result->fetch_assoc()) {
-
-                        echo "<div style='display: flex; flex-direction: column; gap: 20px; box-shadow: 3px 10px 40px lightgrey; padding-block: 40px; padding-inline: 40px;'>
+                        if (date_diff(date_create($current_date), date_create($row['evtDate']))->format("%R%a") > 0) {
+                            // echo date("Y-m-d");
+                            echo "<div style='display: flex; flex-direction: column; gap: 20px; box-shadow: 3px 10px 40px lightgrey; padding-block: 40px; padding-inline: 40px;'>
         
         
         
                         <div>
                             <p style='font-size: 24px;'>" . $row['title'] . "</p>
                             <p>" . $row['body'] .
-                            "</p>
+                                "</p>
                             <div style='display: flex; justify-content: space-evenly'>
                                 <a href='#' class='btn btn-primary' data-toggle='modal'
                                     data-target='#volunteerModal'>VOLUNTEER</a>
@@ -211,12 +212,14 @@
                             <div style='display: flex; justify-content: space-between;'>
                                 <i class='fa fa-clock-o'></i>
                                 <span>" . $row['start'] . "-" . $row['stop'] . "</span>
+                                
                             </div>
         
                         </div>
         
                     </div>";
 
+                        }
                     }
                 }
 
@@ -240,24 +243,20 @@
             if (isset($conn)) {
 
                 $result = $conn->query("SELECT * FROM EVENTS");
-
+                $current_date = date("Y-m-d");
                 if ($result->num_rows > 0) {
 
                     while ($row = $result->fetch_assoc()) {
-
-                        echo "<div style='display: flex; flex-direction: column; gap: 20px; box-shadow: 3px 10px 40px lightgrey; padding-block: 40px; padding-inline: 40px;'>
+                        if (date_diff(date_create($current_date), date_create($row['evtDate']))->format("%R%a") < 0) {
+                            echo "<div style='display: flex; flex-direction: column; gap: 20px; box-shadow: 3px 10px 40px lightgrey; padding-block: 40px; padding-inline: 40px;'>
         
         
         
                         <div>
                             <p style='font-size: 24px;'>" . $row['title'] . "</p>
                             <p>" . $row['body'] .
-                            "</p>
-                            <div style='display: flex; justify-content: space-evenly'>
-                                <a href='#' class='btn btn-primary' data-toggle='modal'
-                                    data-target='#volunteerModal'>VOLUNTEER</a>
-                                <a href='#' class='btn btn-primary' data-toggle='modal' data-target='#donateModal'>Donate</a>
-                            </div>
+                                "</p>
+                           
         
         
         
@@ -282,6 +281,7 @@
         
                     </div>";
 
+                        }
                     }
                 }
 
