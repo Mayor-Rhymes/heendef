@@ -33,11 +33,11 @@
     <header class="main-header">
         
     
-        <nav class="navbar navbar-static-top">
+        <nav class="navbar navbar-static-top" >
 
             <div class="navbar-top">
 
-              <div class="container">
+              <div class="container" style="color: black;">
                   <div class="row">
 
                     <div class="col-sm-6 col-xs-12">
@@ -67,7 +67,7 @@
 
             </div>
 
-            <div class="navbar-main">
+            <div class="navbar-main" style="background-color: black;">
               
               <div class="container">
 
@@ -81,9 +81,8 @@
 
                   </button>
                   
-                  <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/sadaka-logo.png" alt=""></a> -->
-                  <h2>HEENDEF</h2>
-                  
+                  <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.jpg" alt=""></a> -->
+                  <h2>HEENDEF </h2>
                 </div>
 
                 <div id="navbar" class="navbar-collapse collapse pull-right">
@@ -94,24 +93,33 @@
                     <li><a href="about.php">ABOUT</a></li>
                     <li class="has-child"><a href="#">BLOGS</a>
 
-                        <ul class="submenu">
-                        <?php
+                      <ul class="submenu">
+                        
+                        <?php 
+                          
+                           if(isset($conn)){
+                             $result = $conn->query("SELECT * FROM CATEGORY");
+                             if($result->num_rows > 0){
+                               while($row = $result->fetch_assoc()){
+                                echo "<li class='submenu-item'><a href='causes.php'>". $row["name"] . "</a></li>";
+                               }
+                             }
+                            
+                           }
+                        ?>
+                         <!-- <li class="submenu-item"><a href="causes.html">Recent Works</a></li>
+                         <li class="submenu-item"><a href="causes-single.html">Engaged Activities </a></li>
+                         <li class="submenu-item"><a href="causes-single.html">Research Works  </a></li>
+                         <li class="submenu-item"><a href="causes-single.html">Proposed Study </a></li> -->
+                      </ul>
 
-                                    if (isset($conn)) {
-                                        $result = $conn->query("SELECT * FROM CATEGORY");
-                                        if ($result->num_rows > 0) {
-                                            while ($row = $result->fetch_assoc()) {
-                                                echo "<li class='submenu-item'><a href='causes.php'>" . $row["name"] . "</a></li>";
-                                            }
-                                        }
-
-                                    }
-                                    ?>
-                        </ul>
-  
-                      </li>
+                    </li>
+                    <li><a href="events.php">EVENTS</a></li>
                     <li><a href="gallery.php">GALLERY</a></li>
-                    <li><a class="is-active"  href="contact.html">CONTACT</a></li>
+                    <li><a class="is-active" href="contact.php">CONTACT</a></li>
+                    <li><a href="consult.php">CONSULT A DOCTOR</a></li>
+
+                    
 
                   </ul>
 
@@ -224,147 +232,7 @@
 	<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d991.0086126189926!2d3.35892246951583!3d6.517323532030606!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x103b8c49dae553c5%3A0x80e0513dd12a34af!2s18%20Ogunfunmi%20St%2C%20Surulere%20102215%2C%20Lagos!5e0!3m2!1sen!2sng!4v1692558271196!5m2!1sen!2sng" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 
 
-    <footer class="main-footer">
-
-        <div class="footer-top">
-            
-        </div>
-
-
-        <div class="footer-main">
-            <div class="container">
-                
-                <div class="row">
-                    <div class="col-md-4">
-
-                        <div class="footer-col">
-
-                            <h4 class="footer-title">About us <span class="title-under"></span></h4>
-
-                            <div class="footer-content">
-
-                                <p>
-                                    <strong>HEENDEF</strong> Health, Environment and Development Foundation (HEENDEF) is a dynamic non-profit 
-                                    organization that was established on March 7, 2005, with the primary aim of promoting and advancing
-                                     the well-being of communities through sustainable initiatives in health, environment, and development. 
-                                </p> 
-
-                                <p>
-                                  HEENDEF is registered under the Corporate Affairs Commission with Registration Number: CAC/IT/NO 18195.
-                                  </p>
-
-                            </div>
-                            
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-4">
-
-                        <div class="footer-col">
-
-                            <h4 class="footer-title">Events <span class="title-under"></span></h4>
-
-                            <div class="footer-content">
-                                <ul class="tweets list-unstyled">
-                                    <li class="tweet"> 
-
-                                      Technical Adviser Ondo State Ministry of Health, State Malaria Eradication and Control program Annual Operational Planning (AOP for 2018), 2017; (AOP for 2020), 2019.
-
-
-                                    </li>
-
-                                    <li class="tweet"> 
-
-                                      Joint Assessment of National Strategy, Ghana Health Services, 2014
-
-
-                                    </li>
-
-                                    <li class="tweet"> 
-
-                                      EPI-Analysis for National Malaria Eradication Program, Federal Ministry of Health, Abuja 2014.
-
-
-                                    </li>
-
-                                </ul>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-md-4">
-
-                        <div class="footer-col">
-
-                            <h4 class="footer-title">Contact us <span class="title-under"></span></h4>
-
-                            <div class="footer-content">
-
-                                <div class="footer-form" >
-                                    
-                                    <form action="php/mail.php" class="ajax-form">
-
-                                        <div class="form-group">
-                                            <input type="text" name="name" class="form-control" placeholder="Name" required>
-                                        </div>
-
-                                         <div class="form-group">
-                                            <input type="email" name="email" class="form-control" placeholder="E-mail" required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <textarea name="message" class="form-control" placeholder="Message" required></textarea>
-                                        </div>
-
-                                        <div class="form-group alerts">
-                        
-                                            <div class="alert alert-success" role="alert">
-                                              
-                                            </div>
-
-                                            <div class="alert alert-danger" role="alert">
-                                              
-                                            </div>
-                                            
-                                        </div>
-
-                                         <div class="form-group">
-                                            <button type="submit" class="btn btn-submit pull-right">Send message</button>
-                                        </div>
-                                        
-                                    </form>
-
-                                </div>
-                            </div>
-                            
-                        </div>
-
-                    </div>
-                    <div class="clearfix"></div>
-
-
-
-                </div>
-                
-                
-            </div>
-
-            
-        </div>
-
-        <div class="footer-bottom">
-
-            <div class="container text-right">
-                Sadaka @ copyrights 2015 - by <a href="http://www.ouarmedia.com" target="_blank">Ouarmedia</a>
-            </div>
-        </div>
-        
-    </footer>
-
+        <?php include "footer.php"; ?>
 
 
 

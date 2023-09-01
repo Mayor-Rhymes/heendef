@@ -38,105 +38,108 @@
     ================================================== -->
 
     <header class="main-header">
+        
+    
+        <nav class="navbar navbar-static-top" >
 
+            <div class="navbar-top">
 
-        <nav class="navbar navbar-static-top">
+              <div class="container" style="color: black;">
+                  <div class="row">
 
-            <div class="navbar-top" style="background-color: white;">
+                    <div class="col-sm-6 col-xs-12">
 
-                <div class="container">
-                    <div class="row">
-
-                        <div class="col-sm-6 col-xs-12">
-
-                            <ul class="list-unstyled list-inline header-contact" style="color: black;">
-                                <li> <i class="fa fa-phone"></i> <a href="tel:">+234 817 686 9516 </a> </li>
-                                <li> <i class="fa fa-envelope"></i> <a
-                                        href="mailto:bmafolabi@gmail.com">bmafolabi@gmail.com</a> </li>
-                            </ul> <!-- /.header-contact  -->
-
-                        </div>
-
-                        <div class="col-sm-6 col-xs-12 text-right" style="color: black;">
-
-                            <ul class="list-unstyled list-inline header-social">
-
-                                <li> <a href="#"> <i class="fa fa-facebook"></i> </a> </li>
-                                <li> <a href="#"> <i class="fa fa-instagram"></i> </a> </li>
-                                <li> <a href="#"> <i class="fa fa-twitter"></i> </a> </li>
-                                <li> <a href="#"> <i class="fa fa-linkedin"></i> </a> </li>
-                            </ul> <!-- /.header-social  -->
-
-                        </div>
-
-
+                        <ul class="list-unstyled list-inline header-contact">
+                            <li> <i class="fa fa-phone"></i> <a href="tel:">+234 817 686 9516 </a> </li>
+                             <li> <i class="fa fa-envelope"></i> <a href="mailto:bmafolabi@gmail.com">bmafolabi@gmail.com</a> </li>
+                       </ul> <!-- /.header-contact  -->
+                      
                     </div>
-                </div>
+
+                    <div class="col-sm-6 col-xs-12 text-right"  >
+
+                        <ul class="list-unstyled list-inline header-social">
+
+                            <li> <a href="#"> <i class="fa fa-facebook"></i> </a> </li>
+                            <li> <a href="#"> <i class="fa fa-instagram"></i>  </a> </li>
+                            <li> <a href="#"> <i class="fa fa-twitter"></i>  </a> </li>
+                            <li> <a href="#"> <i class="fa fa-linkedin"></i>  </a> </li>
+                       </ul> <!-- /.header-social  -->
+                      
+                    </div>
+
+
+                  </div>
+              </div>
 
             </div>
 
             <div class="navbar-main" style="background-color: black;">
+              
+              <div class="container">
 
-                <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                            data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
 
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
+                  </button>
+                  
+                  <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.jpg" alt=""></a> -->
+                  <h2>HEENDEF </h2>
+                </div>
 
-                        </button>
+                <div id="navbar" class="navbar-collapse collapse pull-right">
 
-                        <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/sadaka-logo.png" alt=""></a> -->
-                        <h2>HEENDEF </h2>
+                  <ul class="nav navbar-nav">
 
-                    </div>
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="about.php">ABOUT</a></li>
+                    <li class="has-child"><a href="#">BLOGS</a>
 
-                    <div id="navbar" class="navbar-collapse collapse pull-right">
+                      <ul class="submenu">
+                        
+                        <?php 
+                          
+                           if(isset($conn)){
+                             $result = $conn->query("SELECT * FROM CATEGORY");
+                             if($result->num_rows > 0){
+                               while($row = $result->fetch_assoc()){
+                                echo "<li class='submenu-item'><a href='causes.php'>". $row["name"] . "</a></li>";
+                               }
+                             }
+                            
+                           }
+                        ?>
+                         <!-- <li class="submenu-item"><a href="causes.html">Recent Works</a></li>
+                         <li class="submenu-item"><a href="causes-single.html">Engaged Activities </a></li>
+                         <li class="submenu-item"><a href="causes-single.html">Research Works  </a></li>
+                         <li class="submenu-item"><a href="causes-single.html">Proposed Study </a></li> -->
+                      </ul>
 
-                        <ul class="nav navbar-nav">
+                    </li>
+                    <li><a href="events.php">EVENTS</a></li>
+                    <li><a class="is-active" href="gallery.php">GALLERY</a></li>
+                    <li><a href="contact.php">CONTACT</a></li>
+                    <li><a href="consult.php">CONSULT A DOCTOR</a></li>
 
-                            <li><a href="index.php">HOME</a></li>
-                            <li><a href="about.php">ABOUT</a></li>
-                            <li class="has-child"><a href="#">BLOGS</a>
+                    
 
-                                <ul class="submenu">
-                                    <?php
+                  </ul>
 
-                                    if (isset($conn)) {
-                                        $result = $conn->query("SELECT * FROM CATEGORY");
-                                        if ($result->num_rows > 0) {
-                                            while ($row = $result->fetch_assoc()) {
-                                                echo "<li class='submenu-item'><a href='causes.php'>" . $row["name"] . "</a></li>";
-                                            }
-                                        }
+                </div> <!-- /#navbar -->
 
-                                    }
-                                    ?>
-                                </ul>
-
-                            </li>
-                            <li><a class="is-active" href="gallery.php">GALLERY</a></li>
-                            <li><a href="admin/index.php">SEE YOUR DOCTOR</a></li>
-                            <li><a href="contact.php">CONTACT</a></li>
-                            <li><a href="events.php">EVENTS</a></li>
-
-                        </ul>
-
-                    </div> <!-- /#navbar -->
-
-                </div> <!-- /.container -->
-
+              </div> <!-- /.container -->
+              
             </div> <!-- /.navbar-main -->
 
 
-        </nav>
+        </nav> 
 
     </header> <!-- /. main-header -->
-
 
     <div class="page-heading text-center">
 
@@ -202,155 +205,7 @@
 
     </div>
 
-    <footer class="main-footer">
-
-        <div class="footer-top">
-
-        </div>
-
-
-        <div class="footer-main">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-md-4">
-
-                        <div class="footer-col">
-
-                            <h4 class="footer-title">About us <span class="title-under"></span></h4>
-
-                            <div class="footer-content">
-
-                                <p>
-                                    <strong>HEENDEF</strong> Health, Environment and Development Foundation (HEENDEF) is
-                                    a dynamic non-profit
-                                    organization that was established on March 7, 2005, with the primary aim of
-                                    promoting and advancing
-                                    the well-being of communities through sustainable initiatives in health,
-                                    environment, and development.
-                                </p>
-
-                                <p>
-                                    HEENDEF is registered under the Corporate Affairs Commission with Registration
-                                    Number: CAC/IT/NO 18195.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-4">
-
-                        <div class="footer-col">
-
-                            <h4 class="footer-title">LAST TWEETS <span class="title-under"></span></h4>
-
-                            <div class="footer-content">
-                                <ul class="tweets list-unstyled">
-                                    <li class="tweet">
-
-                                        20 Surprise Eggs, Kinder Surprise Cars 2 Thomas Spongebob Disney Pixar
-                                        http://t.co/fTSazikPd4
-
-                                    </li>
-
-                                    <li class="tweet">
-
-                                        20 Surprise Eggs, Kinder Surprise Cars 2 Thomas Spongebob Disney Pixar
-                                        http://t.co/fTSazikPd4
-
-                                    </li>
-
-                                    <li class="tweet">
-
-                                        20 Surprise Eggs, Kinder Surprise Cars 2 Thomas Spongebob Disney Pixar
-                                        http://t.co/fTSazikPd4
-
-                                    </li>
-
-                                </ul>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-md-4">
-
-                        <div class="footer-col">
-
-                            <h4 class="footer-title">Contact us <span class="title-under"></span></h4>
-
-                            <div class="footer-content">
-
-                                <div class="footer-form">
-
-                                    <form action="php/mail.php" class="ajax-form">
-
-                                        <div class="form-group">
-                                            <input type="text" name="name" class="form-control" placeholder="Name"
-                                                required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <input type="email" name="email" class="form-control" placeholder="E-mail"
-                                                required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <textarea name="message" class="form-control" placeholder="Message"
-                                                required></textarea>
-                                        </div>
-
-                                        <div class="form-group alerts">
-
-                                            <div class="alert alert-success" role="alert">
-
-                                            </div>
-
-                                            <div class="alert alert-danger" role="alert">
-
-                                            </div>
-
-                                        </div>
-
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-submit pull-right">Send
-                                                message</button>
-                                        </div>
-
-                                    </form>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="clearfix"></div>
-
-
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-        <div class="footer-bottom">
-
-            <div class="container text-right">
-                HEENDEF@ copyrights 2023
-            </div>
-        </div>
-
-    </footer>
-
+    <?php include "footer.php"; ?>
 
 
 

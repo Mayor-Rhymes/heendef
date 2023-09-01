@@ -35,101 +35,106 @@
     ================================================== -->
 
     <header class="main-header">
-
-
-        <nav class="navbar navbar-static-top">
+        
+    
+        <nav class="navbar navbar-static-top" >
 
             <div class="navbar-top">
 
-                <div class="container">
-                    <div class="row">
+              <div class="container" style="color: black;">
+                  <div class="row">
 
-                        <div class="col-sm-6 col-xs-12">
+                    <div class="col-sm-6 col-xs-12">
 
-                            <ul class="list-unstyled list-inline header-contact">
-                                <li> <i class="fa fa-phone"></i> <a href="tel:">+234 817 686 9516 </a> </li>
-                                <li> <i class="fa fa-envelope"></i> <a
-                                        href="mailto:bmafolabi@gmail.com">bmafolabi@gmail.com</a> </li>
-                            </ul> <!-- /.header-contact  -->
-
-                        </div>
-
-                        <div class="col-sm-6 col-xs-12 text-right">
-
-                            <ul class="list-unstyled list-inline header-social">
-
-                                <li> <a href="#"> <i class="fa fa-facebook"></i> </a> </li>
-                                <li> <a href="#"> <i class="fa fa-instagram"></i> </a> </li>
-                                <li> <a href="#"> <i class="fa fa-twitter"></i> </a> </li>
-                                <li> <a href="#"> <i class="fa fa-linkedin"></i> </a> </li>
-                            </ul> <!-- /.header-social  -->
-
-                        </div>
-
-
+                        <ul class="list-unstyled list-inline header-contact">
+                            <li> <i class="fa fa-phone"></i> <a href="tel:">+234 817 686 9516 </a> </li>
+                             <li> <i class="fa fa-envelope"></i> <a href="mailto:bmafolabi@gmail.com">bmafolabi@gmail.com</a> </li>
+                       </ul> <!-- /.header-contact  -->
+                      
                     </div>
-                </div>
+
+                    <div class="col-sm-6 col-xs-12 text-right"  >
+
+                        <ul class="list-unstyled list-inline header-social">
+
+                            <li> <a href="#"> <i class="fa fa-facebook"></i> </a> </li>
+                            <li> <a href="#"> <i class="fa fa-instagram"></i>  </a> </li>
+                            <li> <a href="#"> <i class="fa fa-twitter"></i>  </a> </li>
+                            <li> <a href="#"> <i class="fa fa-linkedin"></i>  </a> </li>
+                       </ul> <!-- /.header-social  -->
+                      
+                    </div>
+
+
+                  </div>
+              </div>
 
             </div>
 
-            <div class="navbar-main">
+            <div class="navbar-main" style="background-color: black;">
+              
+              <div class="container">
 
-                <div class="container">
+                <div class="navbar-header">
+                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 
-                    <div class="navbar-header">
-                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                            data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
 
-                            <span class="sr-only">Toggle navigation</span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
-                            <span class="icon-bar"></span>
+                  </button>
+                  
+                  <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.jpg" alt=""></a> -->
+                  <h2>HEENDEF </h2>
+                </div>
 
-                        </button>
+                <div id="navbar" class="navbar-collapse collapse pull-right">
 
-                        <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/sadaka-logo.png" alt=""></a> -->
-                        <h2>HEENDEF </h2>
-                    </div>
+                  <ul class="nav navbar-nav">
 
-                    <div id="navbar" class="navbar-collapse collapse pull-right">
+                    <li><a href="index.php">HOME</a></li>
+                    <li><a href="about.php">ABOUT</a></li>
+                    <li class="has-child"><a href="#">BLOGS</a>
 
-                        <ul class="nav navbar-nav">
+                      <ul class="submenu">
+                        
+                        <?php 
+                          
+                           if(isset($conn)){
+                             $result = $conn->query("SELECT * FROM CATEGORY");
+                             if($result->num_rows > 0){
+                               while($row = $result->fetch_assoc()){
+                                echo "<li class='submenu-item'><a href='causes.php'>". $row["name"] . "</a></li>";
+                               }
+                             }
+                            
+                           }
+                        ?>
+                         <!-- <li class="submenu-item"><a href="causes.html">Recent Works</a></li>
+                         <li class="submenu-item"><a href="causes-single.html">Engaged Activities </a></li>
+                         <li class="submenu-item"><a href="causes-single.html">Research Works  </a></li>
+                         <li class="submenu-item"><a href="causes-single.html">Proposed Study </a></li> -->
+                      </ul>
 
-                            <li><a href="index.php">HOME</a></li>
-                            <li><a class="is-active" href="about.php">ABOUT</a></li>
-                            <li class="has-child"><a href="#">BLOGS</a>
+                    </li>
+                    <li><a href="events.php">EVENTS</a></li>
+                    <li><a href="gallery.php">GALLERY</a></li>
+                    <li><a href="contact.php">CONTACT</a></li>
+                    <li><a class="is-active" href="consult.php">CONSULT A DOCTOR</a></li>
 
-                                <ul class="submenu">
-                                    <?php
+                    
 
-                                    if (isset($conn)) {
-                                        $result = $conn->query("SELECT * FROM CATEGORY");
-                                        if ($result->num_rows > 0) {
-                                            while ($row = $result->fetch_assoc()) {
-                                                echo "<li class='submenu-item'><a href='causes.php'>" . $row["name"] . "</a></li>";
-                                            }
-                                        }
+                  </ul>
 
-                                    }
-                                    ?>
-                                </ul>
+                </div> <!-- /#navbar -->
 
-                            </li>
-                            <li><a href="gallery.php">GALLERY</a></li>
-                            <li><a href="admin/index.php">SEE YOUR DOCTOR</a></li>
-                            <li><a href="contact.php">CONTACT</a></li>
-                            <li><a href="events.php">EVENTS</a></li>
-
-                        </ul>
-
-                    </div> <!-- /#navbar -->
-
-                </div> <!-- /.container -->
-
+              </div> <!-- /.container -->
+              
             </div> <!-- /.navbar-main -->
 
 
-        </nav>
+        </nav> 
 
     </header> <!-- /. main-header -->
 
@@ -149,8 +154,8 @@
 
     <div class="row" style="padding: 30px; width: 100%">
 
-        <svg class="col-lg-6" id="a2b67f08-851c-405e-b5a2-eb36e85ca139" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg"
-             height="600" style="width: max(600px, 50%)" viewBox="0 0 865.76 682.89">
+        <svg class="col-lg-6" id="a2b67f08-851c-405e-b5a2-eb36e85ca139" data-name="Layer 1"
+            xmlns="http://www.w3.org/2000/svg" height="600" style="width: max(600px, 50%)" viewBox="0 0 865.76 682.89">
             <g id="b1c52b99-47bc-4dec-bbe5-f886aeb14bfc"
                 data-name="freesvgillustration--background-complete--inject-125">
                 <rect x="21.29" y="595.27" width="823.19" height="0.41" fill="#ebebeb" />
@@ -407,6 +412,13 @@
         <form class="col-lg-6">
 
             <div class="row">
+
+
+                <p class="col-lg-12" style="margin-bottom: 20px">
+                    Your health journey is unique, and we understand that personalized guidance is crucial to making
+                    informed decisions. Our "Consult a Doctor" service is here to provide you with expert insights
+                    tailored to your individual needs.
+                </p>
                 <div class="col-lg-6" style="margin-bottom: 10px">
 
                     <label for="firstName">First Name</label>
@@ -466,165 +478,11 @@
 
 
 
-    <footer class="main-footer">
+    
 
-        <div class="footer-top">
 
-        </div>
 
-
-        <div class="footer-main">
-            <div class="container">
-
-                <div class="row">
-                    <div class="col-md-4">
-
-                        <div class="footer-col">
-
-                            <h4 class="footer-title">About us <span class="title-under"></span></h4>
-
-                            <div class="footer-content">
-
-                                <p>
-                                    <strong>HEENDEF</strong> Health, Environment and Development Foundation (HEENDEF) is
-                                    a dynamic non-profit
-                                    organization that was established on March 7, 2005, with the primary aim of
-                                    promoting and advancing
-                                    the well-being of communities through sustainable initiatives in health,
-                                    environment, and development.
-                                </p>
-
-                                <p>
-                                    HEENDEF is registered under the Corporate Affairs Commission with Registration
-                                    Number: CAC/IT/NO 18195.
-                                </p>
-
-                            </div>
-
-                        </div>
-
-                    </div>
-
-                    <div class="col-md-4">
-
-                        <div class="footer-col">
-
-                            <h4 class="footer-title">Events <span class="title-under"></span></h4>
-
-                            <div class="footer-content">
-                                <ul class="tweets list-unstyled">
-                                    <li class="tweet">
-
-                                        Technical Adviser Ondo State Ministry of Health, State Malaria Eradication and
-                                        Control program Annual Operational Planning (AOP for 2018), 2017; (AOP for
-                                        2020), 2019.
-
-
-                                    </li>
-
-                                    <li class="tweet">
-
-                                        Joint Assessment of National Strategy, Ghana Health Services, 2014
-
-
-                                    </li>
-
-                                    <li class="tweet">
-
-                                        EPI-Analysis for National Malaria Eradication Program, Federal Ministry of
-                                        Health, Abuja 2014.
-
-
-                                    </li>
-
-                                </ul>
-                            </div>
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="col-md-4">
-
-                        <div class="footer-col">
-
-                            <h4 class="footer-title">Contact us <span class="title-under"></span></h4>
-
-                            <div class="footer-content">
-
-                                <div class="footer-form">
-
-                                    <form action="php/mail.php" class="ajax-form">
-
-                                        <div class="form-group">
-                                            <input type="text" name="name" class="form-control" placeholder="Name"
-                                                required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <input type="email" name="email" class="form-control" placeholder="E-mail"
-                                                required>
-                                        </div>
-
-                                        <div class="form-group">
-                                            <textarea name="message" class="form-control" placeholder="Message"
-                                                required></textarea>
-                                        </div>
-
-                                        <div class="form-group alerts">
-
-                                            <div class="alert alert-success" role="alert">
-
-                                            </div>
-
-                                            <div class="alert alert-danger" role="alert">
-
-                                            </div>
-
-                                        </div>
-
-                                        <div class="form-group">
-                                            <button type="submit" class="btn btn-submit pull-right">Send
-                                                message</button>
-                                        </div>
-
-                                    </form>
-
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
-                    <div class="clearfix"></div>
-
-
-
-                </div>
-
-
-            </div>
-
-
-        </div>
-
-        <div class="footer-bottom">
-
-            <div class="footer-bottom">
-
-                <div class="container text-right">
-                    HEENDEF@ copyrights 2023
-                </div>
-            </div>
-        </div>
-
-    </footer>
-
-
-
-
-
+    <?php include "footer.php"; ?>
 
     <!-- jQuery -->
     <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
