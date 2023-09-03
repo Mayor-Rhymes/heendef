@@ -15,7 +15,7 @@
 
 body {
   font-family: "Open Sans", sans-serif;
-  background: #f6f9ff;
+  background: #E0F8E9;
   color: #444444;
 }
 
@@ -694,7 +694,7 @@ h6 {
 .sidebar-nav .nav-link i {
   font-size: 16px;
   margin-right: 10px;
-  color: #4154f1;
+  color: #E0F8E9;
 }
 
 .sidebar-nav .nav-link.collapsed {
@@ -821,7 +821,7 @@ h6 {
 }
 
 .dashboard .sales-card .card-icon {
-  color: #4154f1;
+  color: #2eca6a;
   background: #f6f6fe;
 }
 

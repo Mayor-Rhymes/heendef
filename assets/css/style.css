@@ -430,6 +430,30 @@ a:hover, a:focus, a:active {
   padding: 25px 15px;
   margin-bottom: 50px;
 }
+
+
+
+.page-heading-consult {
+  background: url('../images/stet.jpg?1428795369') no-repeat center;
+  background-size: cover;
+  position: relative;
+  min-height: 300px;
+  color: #fff;
+  padding: 25px 15px;
+  margin-bottom: 50px;
+}
+
+
+.ghost {
+
+   width: 100%;
+   height: 100%;
+   background-color: black;
+   opacity: .6;
+   position: absolute;
+   left: 0;
+   top: 0;
+}
 .page-heading .title-under {
   background: #fff;
 }
@@ -647,11 +671,12 @@ form .alert {
   border-radius: 0;
 }
 .modal .modal-header {
-  background: #1f76bd;
+  background-color: green;
   color: #fff;
 }
 .modal .modal-header .close {
   font-style: 26px;
+  
 }
 
 .lightbox {
