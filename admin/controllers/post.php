@@ -1,8 +1,8 @@
 <?php
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["image"])) {
     $title = $_POST['title'];
-    $body = $_POST['hidden'];
-    $subject = $_POST['subject'];
+    $body = $_POST['body'];
+    // $subject = $_POST['subject'];
     $code = "HDP".rand(1,1000);   
     $author = 1; 
     $category = $_POST['category'];
@@ -33,8 +33,8 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["image"])) {
         die("Only JPG, JPEG, PNG, and WebP files are allowed.");
     }
     // Check image dimensions
-    $maxWidth = 800; // Change this to your desired maximum width
-    $maxHeight = 600; // Change this to your desired maximum height
+    $maxWidth = 2084; // Change this to your desired maximum width
+    $maxHeight = 2084; // Change this to your desired maximum height
     list($width, $height) = getimagesize($_FILES["image"]["tmp_name"]);
     if ($width > $maxWidth || $height > $maxHeight) {
         die ("<span color:red;>Image dimensions should be no larger than {$maxWidth}x{$maxHeight}px.</span>");
@@ -49,7 +49,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["image"])) {
     $image_path = mysqli_real_escape_string($conn, $targetFile);
     $image_name = mysqli_real_escape_string($conn, $_FILES["image"]["name"]);
     
-    $sql = "INSERT INTO blog (title,subject,body,author,category,code,image_name,image_path) VALUES('$title','$subject','$body','$author','$category','$code','$image_name','$image_path')";
+    $sql = "INSERT INTO blog (title,body,author,category,code,image_name,image_path) VALUES('$title','$body','$author','$category','$code','$image_name','$image_path')";
     $exec = mysqli_query($conn,$sql);
     if($exec){
         echo "<script>alert('updated successfully')</script>";

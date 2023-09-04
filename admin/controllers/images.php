@@ -1,7 +1,7 @@
 <?php
 error_reporting(0);
 if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["image"])) {
-    $name = $_POST['name'];
+    $name = $_POST['title'];
     $albumName = $_POST['album-name'];
 
     $sql = "SELECT id FROM album WHERE title = $albumName";
@@ -9,7 +9,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["image"])) {
     $row = mysqli_fetch_row($query);
     $albumId = $row[0];
     $name = mysqli_real_escape_string($conn, $name);
-    $albumName = mysqli_real_escape_string($conn, $albumName);
+    // $albumName = mysqli_real_escape_string($conn, $albumName);
     //Change this to the directory where you want to store the images
     $targetDirectory = "uploads/album-images/"; 
     $targetFile = $targetDirectory . basename($_FILES["image"]["name"]);
@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["image"])) {
     $imagePath = mysqli_real_escape_string($conn, $targetFile);
     $imageName = mysqli_real_escape_string($conn, $_FILES["image"]["name"]);
     // $active = 1;
-    $sql = "INSERT INTO images (name, album_id, path) VALUES ('$name', '$albumId', '$imagePath')";
+    $sql = "INSERT INTO images (name, album_id, path) VALUES ($name, $albumId, $imagePath)";
     $exec = mysqli_query($conn, $sql);
     if($exec){
         
@@ -56,6 +56,6 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["image"])) {
         echo ("Error");
     }
 
-    header("location:album-images");
+    header("location:images");
 }
 ?>

@@ -84,12 +84,12 @@ include 'controllers/post.php' ;
                   </div>
                 </div>
                 <br>
-                    <div class="col-md-12">
+                    <!-- <div class="col-md-12">
                   <div class="form-floating">
                     <input type="text" class="form-control" id="floatingName" name="subject" maxlength="250" >
                     <label for="floatingName">Subject</label>
                   </div>
-                </div>
+                </div> -->
                 <br>
                      <div class="form-floating mb-3">
                       <select class="form-select" id="floatingSelect" name="category" aria-label="Floating label select example">
@@ -107,12 +107,21 @@ include 'controllers/post.php' ;
 
               <!-- Quill Editor Full -->
                 <br>
-              <div id="editor-container">
+              <!-- <div id="editor-container">
                 <h3>Body Goes Here!!</h3>
               
               </div>
                <input type="hidden" id="hidden-field" name="hidden">
-                <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script>
+                <script src="https://cdn.quilljs.com/1.3.6/quill.js"></script> -->
+
+               
+                <textarea
+                class="form-control col-12"
+                placeholder = "Please enter body"
+                name = "body"
+                rows="4"
+                style="resize: none"
+                ></textarea>
             <script>
         function previewImage() {
             var fileInput = document.getElementById('image');

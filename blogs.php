@@ -168,10 +168,10 @@
     ?>
 
 
-    
 
-        
+    <div class='container'>
 
+        <div class='row'>
 
             <?php
 
@@ -181,13 +181,13 @@
 
             if ($result2->num_rows > 0) {
                 // echo "<div class='section-home our-causes animate-onscroll fadeIn'>";
-                echo "<div class='container'>";
-                echo "<div class='row'>";
+            
+                echo "";
                 while ($row = $result2->fetch_assoc()) {
 
                     $path = 'admin/' . $row['image_path'];
                     $title = $row['title'];
-                    $description = $row['subject'];
+                    $description = $row['body'];
 
                     echo '<div class="col-md-3 col-sm-6">
                     
@@ -209,9 +209,9 @@
                             </div> <!-- /.cause -->
                             
                         </div> ';
-                    echo "</div>";
-                    echo "</div>";
-                    // echo "</div>";
+
+
+
 
                 }
             } else {
@@ -223,12 +223,13 @@
 
 
             ?>
+        </div>
+    </div>
 
 
 
-        
 
-     <!-- /.blogs -->
+    <!-- /.blogs -->
 
 
 
