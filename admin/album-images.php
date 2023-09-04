@@ -116,7 +116,7 @@ include 'controllers/album-images.php';
                                 <div class="modal-dialog">
                                     <form method="POST" enctype="multipart/form-data">
                                         <div class="modal-content">
-                                            <div class="modal-header">
+                                            <div class="modal-header bg-success" style="--bs-bg-opacity: .5;">
                                                 <h1 class="modal-title fs-5" id="staticBackdropLabel">Add New Image To
                                                     Album</h1>
                                                 <button type="button" class="btn-close" data-bs-dismiss="modal"
