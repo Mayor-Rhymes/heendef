@@ -104,7 +104,9 @@
                              $result = $conn->query("SELECT * FROM CATEGORY");
                              if($result->num_rows > 0){
                                while($row = $result->fetch_assoc()){
-                                echo "<li class='submenu-item'><a href='causes.php'>". $row["name"] . "</a></li>";
+                                $category = $row["name"];
+                                $id = $row["id"];
+                                echo "<li class='submenu-item'><a href='blogs.php?category=$id'>". $category . "</a></li>";
                                }
                              }
                             
