@@ -47,7 +47,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST" && isset($_FILES["image"])) {
     $imagePath = mysqli_real_escape_string($conn, $targetFile);
     $imageName = mysqli_real_escape_string($conn, $_FILES["image"]["name"]);
     // $active = 1;
-    $sql = "INSERT INTO images (name, album_id, path) VALUES ($name, $albumId, '$imagePath')";
+    $sql = "INSERT INTO images (name, album_id, path) VALUES ('$name', $albumId, '$imagePath')";
     $exec = mysqli_query($conn, $sql);
     if($exec){
         
