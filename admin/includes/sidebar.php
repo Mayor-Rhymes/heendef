@@ -53,7 +53,7 @@
               <i class="bi bi-tv"></i><span>Album</span>
             </a>
           </li>
-            <a href="album-images">
+            <a href="images">
               <i class="bi bi-tv"></i><span>Album Images</span>
             </a>
           </li>

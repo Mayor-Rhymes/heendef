@@ -150,8 +150,9 @@ include 'controllers/post.php' ;
                   <div class="form-floating">
                     <img id="preview" src="#" alt="Preview" style="display: none; max-width: 400px; max-height: 300px;" />
                     <hr>
-                    <input type="file" class="form-control" title="Image" name="image" id="image" accept="image/*" onchange="previewImage()" >
+                    <input type="file" class="form-control" title="Image" name="image" id="image" accept="image/*" onchange="previewImage()" />
                        <label for="floatingTextarea">Image</label>
+                       <p>Please make sure that your image size is a maximum of 1200 by 1200</p>
                 
         <br />
                   </div>

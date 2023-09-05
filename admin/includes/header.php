@@ -13,7 +13,7 @@ if (empty($_SESSION['id'])) {
 
       <span class="d-none d-lg-block">Heendef</span> &nbsp;
       <!-- <div style="height: 80px; width:80px;"> -->
-        <img src="../assets/images/heendeflogo.jpg" alt="" style="height: 80px; width: 80px; "></img>
+        <img src="../assets/images/heendeflogo.jpg" alt="" style="height: 100px; width: 150px; "></img>
       <!-- </div> -->
     </a>
     <i class="bi bi-list toggle-sidebar-btn"></i>

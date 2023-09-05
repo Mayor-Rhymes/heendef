@@ -88,7 +88,7 @@
                         </button>
 
                         <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.jpg" alt=""></a> -->
-                        <div style="height: 80px; width:80px;">
+                        <div style="height: 80px; width:150px;">
                             <img src="assets/images/heendeflogo.jpg" alt="" style="height: 100%; width: 100%; "></img>
                         </div>
                     </div>
@@ -415,7 +415,7 @@
                 fill="#2f2e41" />
         </svg>
 
-        <form class="col-lg-6 row" action="mailto:emailid@example.com" method="post" enctype="text/plain">
+        <form class="col-lg-6 row" action="consult.php" method="post">
 
             <!-- <div class="row"> -->
 
@@ -428,13 +428,13 @@
             <div class="col-lg-6" style="margin-bottom: 10px">
 
                 <label for="firstName">First Name</label>
-                <input type="text" class="form-control" id="firstName" placeholder="Please enter firstname" />
+                <input type="text" class="form-control" name="firstname" id="firstName" placeholder="Please enter firstname" />
 
             </div>
             <div class="col-lg-6" style="margin-bottom: 10px">
 
                 <label for="lastName">Last Name</label>
-                <input type="text" class="form-control" id="lastName" placeholder="Please enter lastname" />
+                <input type="text" class="form-control" name="lastname" id="lastName" placeholder="Please enter lastname" />
 
             </div>
 
@@ -442,25 +442,25 @@
             <div class="col-lg-6" style="margin-bottom: 10px">
 
                 <label for="email">Email</label>
-                <input type="email" class="form-control" id="email" placeholder="Please enter email" />
+                <input type="email" class="form-control" name="email" id="email" placeholder="Please enter email" />
 
             </div>
             <div class="col-lg-6" style="margin-bottom: 10px">
 
                 <label for="phoneNumber">Phone Number</label>
-                <input type="text" class="form-control" id="phoneName" placeholder="Please enter phone number" />
+                <input type="text" class="form-control" name="phonenumber" id="phoneNumber" placeholder="Please enter phone number" />
 
             </div>
             <div class="col-lg-12" style="margin-bottom: 10px">
 
                 <label for="age">Age</label>
-                <input type="number" class="form-control" id="age" placeholder="Please enter age" />
+                <input type="number" class="form-control" name="age" id="age" placeholder="Please enter age" />
 
             </div>
             <div class="col-lg-12" style="margin-bottom: 10px">
 
                 <label for="message">Describe Problem/message</label>
-                <textarea class="form-control" rows="7" placeholder="Please enter message"
+                <textarea class="form-control" name="problem" rows="7" placeholder="Please enter message"
                     style="resize:none"></textarea>
 
             </div>

@@ -92,7 +92,7 @@
 
                         <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.jpg" alt=""></a> -->
                         <!-- <h2>HEENDEF </h2> -->
-                        <div style="height: 80px; width:80px;">
+                        <div style="height: 80px; width:150px;">
                             <img src="assets/images/heendeflogo.jpg" alt="" style="height: 100%; width: 100%; "></img>
                         </div>
                     </div>
