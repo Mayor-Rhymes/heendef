@@ -12,7 +12,9 @@ if (empty($_SESSION['id'])) {
     <a href="" class="logo d-flex align-items-center">
 
       <span class="d-none d-lg-block">Heendef</span> &nbsp;
-      <img src="../img/hermes.png" alt="Heendef">
+      <!-- <div style="height: 80px; width:80px;"> -->
+        <img src="../assets/images/heendeflogo.jpg" alt="" style="height: 80px; width: 80px; "></img>
+      <!-- </div> -->
     </a>
     <i class="bi bi-list toggle-sidebar-btn"></i>
   </div><!-- End Logo -->

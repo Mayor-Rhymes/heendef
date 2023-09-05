@@ -35,107 +35,113 @@
 <body>
 
 
-<header class="main-header">
-        
-    
-        <nav class="navbar navbar-static-top" >
+    <header class="main-header">
+
+
+        <nav class="navbar navbar-static-top">
 
             <div class="navbar-top">
 
-              <div class="container" style="color: black;">
-                  <div class="row">
+                <div class="container" style="color: black;">
+                    <div class="row">
 
-                    <div class="col-sm-6 col-xs-12">
+                        <div class="col-sm-6 col-xs-12">
 
-                        <ul class="list-unstyled list-inline header-contact">
-                            <li> <i class="fa fa-phone"></i> <a href="tel:">+234 817 686 9516 </a> </li>
-                             <li> <i class="fa fa-envelope"></i> <a href="mailto:bmafolabi@gmail.com">bmafolabi@gmail.com</a> </li>
-                       </ul> <!-- /.header-contact  -->
-                      
+                            <ul class="list-unstyled list-inline header-contact">
+                                <li> <i class="fa fa-phone"></i> <a href="tel:">+234 817 686 9516 </a> </li>
+                                <li> <i class="fa fa-envelope"></i> <a
+                                        href="mailto:bmafolabi@gmail.com">bmafolabi@gmail.com</a> </li>
+                            </ul> <!-- /.header-contact  -->
+
+                        </div>
+
+                        <div class="col-sm-6 col-xs-12 text-right">
+
+                            <ul class="list-unstyled list-inline header-social">
+
+                                <li> <a href="#"> <i class="fa fa-facebook"></i> </a> </li>
+                                <li> <a href="#"> <i class="fa fa-instagram"></i> </a> </li>
+                                <li> <a href="#"> <i class="fa fa-twitter"></i> </a> </li>
+                                <li> <a href="#"> <i class="fa fa-linkedin"></i> </a> </li>
+                            </ul> <!-- /.header-social  -->
+
+                        </div>
+
+
                     </div>
-
-                    <div class="col-sm-6 col-xs-12 text-right"  >
-
-                        <ul class="list-unstyled list-inline header-social">
-
-                            <li> <a href="#"> <i class="fa fa-facebook"></i> </a> </li>
-                            <li> <a href="#"> <i class="fa fa-instagram"></i>  </a> </li>
-                            <li> <a href="#"> <i class="fa fa-twitter"></i>  </a> </li>
-                            <li> <a href="#"> <i class="fa fa-linkedin"></i>  </a> </li>
-                       </ul> <!-- /.header-social  -->
-                      
-                    </div>
-
-
-                  </div>
-              </div>
+                </div>
 
             </div>
 
             <div class="navbar-main" style="background-color: black;">
-              
-              <div class="container">
 
-                <div class="navbar-header">
-                  <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+                <div class="container">
 
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+                            data-target="#navbar" aria-expanded="false" aria-controls="navbar">
 
-                  </button>
-                  
-                  <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.jpg" alt=""></a> -->
-                  <h2>HEENDEF </h2>
-                </div>
+                            <span class="sr-only">Toggle navigation</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
 
-                <div id="navbar" class="navbar-collapse collapse pull-right">
+                        </button>
 
-                  <ul class="nav navbar-nav">
+                        <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.jpg" alt=""></a> -->
+                        <div style="height: 80px; width:80px;">
+                            <img src="assets/images/heendeflogo.jpg" alt="" style="height: 100%; width: 100%; "></img>
+                        </div>
+                    </div>
 
-                    <li><a href="index.php">HOME</a></li>
-                    <li><a href="about.php">ABOUT</a></li>
-                    <li class="has-child"><a href="#">BLOGS</a>
+                    <div id="navbar" class="navbar-collapse collapse pull-right">
 
-                      <ul class="submenu">
-                        
-                        <?php 
-                          
-                           if(isset($conn)){
-                             $result = $conn->query("SELECT * FROM CATEGORY");
-                             if($result->num_rows > 0){
-                               while($row = $result->fetch_assoc()){
-                                echo "<li class='submenu-item'><a href='causes.php'>". $row["name"] . "</a></li>";
-                               }
-                             }
-                            
-                           }
-                        ?>
-                         <!-- <li class="submenu-item"><a href="causes.html">Recent Works</a></li>
+                        <ul class="nav navbar-nav">
+
+                            <li><a href="index.php">HOME</a></li>
+                            <li><a href="about.php">ABOUT</a></li>
+                            <li class="has-child"><a href="#">BLOGS</a>
+
+                                <ul class="submenu">
+
+                                    <?php
+
+                                    if (isset($conn)) {
+                                        $result = $conn->query("SELECT * FROM CATEGORY");
+                                        if ($result->num_rows > 0) {
+                                            while ($row = $result->fetch_assoc()) {
+                                                $category = $row["name"];
+                                                $id = $row["id"];
+                                                echo "<li class='submenu-item'><a href='blogs.php?category=$id'>" . $category . "</a></li>";
+                                            }
+                                        }
+
+                                    }
+                                    ?>
+                                    <!-- <li class="submenu-item"><a href="causes.html">Recent Works</a></li>
                          <li class="submenu-item"><a href="causes-single.html">Engaged Activities </a></li>
                          <li class="submenu-item"><a href="causes-single.html">Research Works  </a></li>
                          <li class="submenu-item"><a href="causes-single.html">Proposed Study </a></li> -->
-                      </ul>
+                                </ul>
 
-                    </li>
-                    <li><a class="is-active" href="events.php">EVENTS</a></li>
-                    <li><a href="gallery.php">GALLERY</a></li>
-                    <li><a href="contact.php">CONTACT</a></li>
-                    <li><a href="consult.php">CONSULT A DOCTOR</a></li>
+                            </li>
+                            <li><a class="is-active" href="events.php">EVENTS</a></li>
+                            <li><a href="gallery.php">GALLERY</a></li>
+                            <li><a href="contact.php">CONTACT</a></li>
+                            <li><a href="consult.php">CONSULT A DOCTOR</a></li>
 
-                    
 
-                  </ul>
 
-                </div> <!-- /#navbar -->
+                        </ul>
 
-              </div> <!-- /.container -->
-              
+                    </div> <!-- /#navbar -->
+
+                </div> <!-- /.container -->
+
             </div> <!-- /.navbar-main -->
 
 
-        </nav> 
+        </nav>
 
     </header> <!-- /. main-header -->
 

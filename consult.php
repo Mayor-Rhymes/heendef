@@ -88,7 +88,9 @@
                         </button>
 
                         <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.jpg" alt=""></a> -->
-                        <h2>HEENDEF </h2>
+                        <div style="height: 80px; width:80px;">
+                            <img src="assets/images/heendeflogo.jpg" alt="" style="height: 100%; width: 100%; "></img>
+                        </div>
                     </div>
 
                     <div id="navbar" class="navbar-collapse collapse pull-right">
@@ -107,7 +109,9 @@
                                         $result = $conn->query("SELECT * FROM CATEGORY");
                                         if ($result->num_rows > 0) {
                                             while ($row = $result->fetch_assoc()) {
-                                                echo "<li class='submenu-item'><a href='causes.php'>" . $row["name"] . "</a></li>";
+                                                $category = $row["name"];
+                                                $id = $row["id"];
+                                                echo "<li class='submenu-item'><a href='blogs.php?category=$id'>" . $category . "</a></li>";
                                             }
                                         }
 
@@ -142,7 +146,7 @@
 
 
     <div class="page-heading-consult text-center">
-         <div class="ghost"></div>
+        <div class="ghost"></div>
         <div class="container zoomIn animated">
 
             <h1 class="page-title">CONSULT A DOCTOR <span class="title-under"></span></h1>

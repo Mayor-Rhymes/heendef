@@ -88,7 +88,10 @@
                         </button>
 
                         <!-- <a class="navbar-brand" href="index.html"><img src="assets/images/logo.jpg" alt=""></a> -->
-                        <h2>HEENDEF </h2>
+                        <!-- <h2>HEENDEF </h2> -->
+                        <div style="height: 80px; width:80px;">
+                            <img src="assets/images/heendeflogo.jpg" alt="" style="height: 100%; width: 100%; "></img>
+                        </div>
                     </div>
 
                     <div id="navbar" class="navbar-collapse collapse pull-right">
