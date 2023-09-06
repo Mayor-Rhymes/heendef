@@ -1,0 +1,5 @@
+---
+deployment:
+  tasks:
+    - export DEPLOYPATH=/home/vontwtqq/repositories/heendef
+    - /bin/cp -R * $DEPLOYPATH
